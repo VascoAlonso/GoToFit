@@ -19,6 +19,9 @@ const Login = () => {
       <TouchableOpacity style={styles.loginButton}>
         <Text style={styles.buttonText}>Iniciar Sesión</Text>
       </TouchableOpacity>
+      <TouchableOpacity style={styles.registerButton}>
+        <Text style={styles.buttonText}>Registrarse</Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -29,13 +32,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
-    backgroundColor: '#0e0e36', // Color azul oscuro
+    backgroundColor: '#0e0e36', 
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 20,
-    color: 'white', // Color del texto
+    color: 'white', 
   },
   input: {
     width: '100%',
@@ -45,10 +48,16 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     paddingHorizontal: 10,
     marginBottom: 10,
-    backgroundColor: 'white', // Color del fondo del campo de entrada
+    backgroundColor: 'white', 
   },
   loginButton: {
-    backgroundColor: '#3282B8', // Color azul
+    backgroundColor: '#3282B8', 
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 5,
+  },
+  registerButton: {
+    backgroundColor: '#1E8449', 
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 5,

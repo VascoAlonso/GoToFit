@@ -6,7 +6,7 @@ const Rutinas = () => {
     { id: '1', name: 'Rutina de Cardio', difficulty: 'Intermedia' },
     { id: '2', name: 'Rutina de Fuerza', difficulty: 'Avanzada' },
     { id: '3', name: 'Rutina de Flexibilidad', difficulty: 'Principiante' },
-    // ... Agrega más rutinas aquí
+    
   ];
 
   const renderRoutineItem = ({ item }) => (
@@ -31,7 +31,7 @@ const Rutinas = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0e0e36', // Color azul oscuro
+    backgroundColor: '#0e0e36', 
     padding: 20,
   },
   title: {

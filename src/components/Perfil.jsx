@@ -6,7 +6,7 @@ const Perfil = () => {
     <View style={styles.container}>
       <View style={styles.profileHeader}>
         <Image
-          source={require('../images/60111.jpg')} // Coloca la URL o ruta de la imagen
+          source={require('../images/60111.jpg')} 
           style={styles.profileImage}
         />
         <Text style={styles.username}>Nombre de Usuario</Text>
@@ -24,7 +24,7 @@ const Perfil = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0e0e36', // Color azul oscuro
+    backgroundColor: '#0e0e36', 
     padding: 20,
   },
   profileHeader: {
