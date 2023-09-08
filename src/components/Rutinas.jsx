@@ -1,20 +1,19 @@
-import React from 'react';
-import { View, Text, StyleSheet, FlatList } from 'react-native';
+import React from 'react'
+import { View, Text, StyleSheet, FlatList } from 'react-native'
 
 const Rutinas = () => {
   const data = [
     { id: '1', name: 'Rutina de Cardio', difficulty: 'Intermedia' },
     { id: '2', name: 'Rutina de Fuerza', difficulty: 'Avanzada' },
-    { id: '3', name: 'Rutina de Flexibilidad', difficulty: 'Principiante' },
-    
-  ];
+    { id: '3', name: 'Rutina de Flexibilidad', difficulty: 'Principiante' }
+  ]
 
   const renderRoutineItem = ({ item }) => (
     <View style={styles.routineItem}>
       <Text style={styles.routineName}>{item.name}</Text>
       <Text style={styles.routineDifficulty}>{item.difficulty}</Text>
     </View>
-  );
+  )
 
   return (
     <View style={styles.container}>
@@ -25,20 +24,20 @@ const Rutinas = () => {
         keyExtractor={item => item.id}
       />
     </View>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0e0e36', 
-    padding: 20,
+    backgroundColor: '#0e0e36',
+    padding: 20
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 20,
-    color: 'white',
+    color: 'white'
   },
   routineItem: {
     flexDirection: 'row',
@@ -46,16 +45,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderBottomWidth: 1,
     borderBottomColor: 'white',
-    paddingVertical: 10,
+    paddingVertical: 10
   },
   routineName: {
     fontSize: 18,
-    color: 'white',
+    fontWeight: 'bold',
+    color: 'white'
   },
   routineDifficulty: {
     fontSize: 16,
-    color: 'white',
-  },
-});
+    color: 'cyan'
+  }
+})
 
-export default Rutinas;
+export default Rutinas

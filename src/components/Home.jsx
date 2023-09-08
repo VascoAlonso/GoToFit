@@ -1,20 +1,20 @@
-import React from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import React from 'react'
+import { View, Text, StyleSheet, Image } from 'react-native'
 
 const Home = () => {
   return (
     <View style={styles.container}>
       <View style={styles.homeLogo}>
         <Image
-          source={require('../images/GoToFit.png')} 
+          source={require('../images/GoToFit.png')}
           style={styles.homeLogo}
         />
-        </View>
-      <Text style={styles.title}>Bienvenido a Go To Fit</Text>
+      </View>
+      <Text style={styles.title}>Bienvenido a Go To Fit.</Text>
       <Text style={styles.subtitle}>Empieza tu rutina de ejercicios hoy mismo</Text>
     </View>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -22,24 +22,25 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
-    backgroundColor: '#0e0e36', 
+    backgroundColor: '#0e0e36'
   },
   homeLogo: {
-    width: 120,
-    height: 120,
+    width: 180,
+    height: 180,
     borderRadius: 60,
-    marginBottom: 10,
+    marginBottom: 50
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
-    marginBottom: 10,
-    color: "white"
+    marginBottom: 0,
+    color: 'white'
   },
   subtitle: {
-    fontSize: 18,
-    color: 'gray',
-  },
-});
+    fontSize: 14,
+    fontWeight: 'bold',
+    color: 'cyan'
+  }
+})
 
-export default Home;
+export default Home

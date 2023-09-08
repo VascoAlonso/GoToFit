@@ -1,5 +1,5 @@
-import React from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import React from 'react'
+import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native'
 
 const Login = () => {
   return (
@@ -7,13 +7,13 @@ const Login = () => {
       <Text style={styles.title}>Iniciar Sesión</Text>
       <TextInput
         style={styles.input}
-        placeholder="Correo Electrónico"
-        keyboardType="email-address"
-        autoCapitalize="none"
+        placeholder='Correo Electrónico'
+        keyboardType='email-address'
+        autoCapitalize='none'
       />
       <TextInput
         style={styles.input}
-        placeholder="Contraseña"
+        placeholder='Contraseña'
         secureTextEntry
       />
       <TouchableOpacity style={styles.loginButton}>
@@ -23,8 +23,8 @@ const Login = () => {
         <Text style={styles.buttonText}>Registrarse</Text>
       </TouchableOpacity>
     </View>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -32,13 +32,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
-    backgroundColor: '#0e0e36', 
+    backgroundColor: '#0e0e36'
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 20,
-    color: 'white', 
+    color: 'white'
   },
   input: {
     width: '100%',
@@ -48,25 +48,26 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     paddingHorizontal: 10,
     marginBottom: 10,
-    backgroundColor: 'white', 
+    backgroundColor: 'white'
   },
   loginButton: {
-    backgroundColor: '#3282B8', 
+    backgroundColor: '#3282B8',
     paddingVertical: 10,
     paddingHorizontal: 20,
-    borderRadius: 5,
+    borderRadius: 5
   },
   registerButton: {
-    backgroundColor: '#1E8449', 
+    backgroundColor: '#1E8449',
     paddingVertical: 10,
-    paddingHorizontal: 20,
-    borderRadius: 5,
+    paddingHorizontal: 28,
+    marginTop: 10,
+    borderRadius: 5
   },
   buttonText: {
     color: 'white',
     fontSize: 16,
-    fontWeight: 'bold',
-  },
-});
+    fontWeight: 'bold'
+  }
+})
 
-export default Login;
+export default Login
