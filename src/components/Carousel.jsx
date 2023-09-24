@@ -1,10 +1,17 @@
 import React from 'react'
-import { View, StyleSheet, Image } from 'react-native'
+import { View, StyleSheet, Image, Dimensions } from 'react-native'
 import Swiper from 'react-native-swiper'
+
+const { width } = Dimensions.get('window')
 
 const Carousel = () => {
   return (
-    <Swiper style={styles.wrapper} autoplay={false} autoplayTimeout={4}>
+    <Swiper
+      style={styles.wrapper}
+      autoplay
+      autoplayTimeout={3}
+      showsPagination={false} // Oculta los puntos de paginación
+    >
       <View style={styles.slide}>
         <Image
           source={require('../images/image1.jpg')}
@@ -77,8 +84,8 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   image: {
-    width: '100%',
-    height: 450, // Ajusta la altura de la imagen según tus necesidades
+    width: width,
+    height: 300, // Ajusta la altura de la imagen según tus necesidades
     resizeMode: 'cover'
   }
 })
