@@ -6,6 +6,9 @@ import Home from './Home.jsx'
 import Login from './Login.jsx'
 import Perfil from './Perfil.jsx'
 import Rutinas from './Rutinas.jsx'
+import RutinaFuerza from './RutinaFuerza.jsx'
+import RutinaFlexibilidad from './RutinaFlexibilidad.jsx'
+import RutinaCardio from './RutinaCardio.jsx'
 
 const Main = () => {
   return (
@@ -16,6 +19,9 @@ const Main = () => {
         <Route path='/signin' component={Login} />
         <Route path='/rutinas' component={Rutinas} />
         <Route path='/miperfil' component={Perfil} />
+        <Route path='/RutinaCardio' component={RutinaCardio} />
+        <Route path='/RutinaFuerza' component={RutinaFuerza} />
+        <Route path='/RutinaFlexibilidad' component={RutinaFlexibilidad} />
       </Switch>
     </View>
   )
