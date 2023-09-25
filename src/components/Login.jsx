@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { View, StyleSheet, ImageBackground, TouchableOpacity, ScrollView } from 'react-native';
 import {
@@ -11,10 +10,6 @@ import {
 } from 'react-native-paper';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NativeRouter, Route, Link } from 'react-router-native';
-=======
-import React from 'react'
-import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native'
->>>>>>> 3147d844b3997120f5fbae18596c91250a103c36
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -25,7 +20,6 @@ const Login = () => {
   };
 
   return (
-<<<<<<< HEAD
     <NativeRouter>
       <SafeAreaProvider>
         <ImageBackground
@@ -38,7 +32,7 @@ const Login = () => {
                 <Card.Content>
                   <Title style={styles.title}>¡Volviste!</Title>
                   <Paragraph style={styles.cardSubtitle}>
-                    Inicia sesión para acceder a tus rutinas favoritas.
+                    Inicia sesión para acceder a tus rutinas.
                   </Paragraph>
                   <TextInput
                     label="Nombre de usuario"
@@ -89,30 +83,6 @@ const Login = () => {
     </NativeRouter>
   );
 };
-=======
-    <View style={styles.container}>
-      <Text style={styles.title}>Iniciar Sesión</Text>
-      <TextInput
-        style={styles.input}
-        placeholder='Correo Electrónico'
-        keyboardType='email-address'
-        autoCapitalize='none'
-      />
-      <TextInput
-        style={styles.input}
-        placeholder='Contraseña'
-        secureTextEntry
-      />
-      <TouchableOpacity style={styles.loginButton}>
-        <Text style={styles.buttonText}>Iniciar Sesión</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.registerButton}>
-        <Text style={styles.buttonText}>Registrarse</Text>
-      </TouchableOpacity>
-    </View>
-  )
-}
->>>>>>> 3147d844b3997120f5fbae18596c91250a103c36
 
 const styles = StyleSheet.create({
   backgroundImage: {
@@ -126,24 +96,17 @@ const styles = StyleSheet.create({
   content: {
     flex: 1,
     justifyContent: 'center',
-<<<<<<< HEAD
     paddingHorizontal: 16,
   },
   card: {
     backgroundColor: 'rgba(255, 255, 255, 0.95)',
     borderRadius: 16,
     elevation: 6,
-=======
-    alignItems: 'center',
-    padding: 20,
-    backgroundColor: '#0e0e36'
->>>>>>> 3147d844b3997120f5fbae18596c91250a103c36
   },
   title: {
     fontSize: 28,
     marginBottom: 8,
     fontWeight: 'bold',
-<<<<<<< HEAD
     color: '#1E90FF', // Color de título (azul claro)
   },
   cardSubtitle: {
@@ -159,35 +122,6 @@ const styles = StyleSheet.create({
     marginTop: 16,
   },
   loginButtonLabel: {
-=======
-    marginBottom: 20,
-    color: 'white'
-  },
-  input: {
-    width: '100%',
-    height: 40,
-    borderColor: 'gray',
-    borderWidth: 1,
-    borderRadius: 5,
-    paddingHorizontal: 10,
-    marginBottom: 10,
-    backgroundColor: 'white'
-  },
-  loginButton: {
-    backgroundColor: '#3282B8',
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-    borderRadius: 5
-  },
-  registerButton: {
-    backgroundColor: '#1E8449',
-    paddingVertical: 10,
-    paddingHorizontal: 28,
-    marginTop: 10,
-    borderRadius: 5
-  },
-  buttonText: {
->>>>>>> 3147d844b3997120f5fbae18596c91250a103c36
     color: 'white',
   },
   forgotPasswordLink: {
@@ -210,13 +144,9 @@ const styles = StyleSheet.create({
   registerLink: {
     color: '#1E90FF',
     fontSize: 16,
-    fontWeight: 'bold'
-  }
-})
+    fontWeight: 'bold',
+  },
+});
 
-<<<<<<< HEAD
 export default Login;
 
-=======
-export default Login
->>>>>>> 3147d844b3997120f5fbae18596c91250a103c36

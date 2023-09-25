@@ -27,14 +27,6 @@ const Home = () => {
 
   return (
     <View style={styles.container}>
-<<<<<<< HEAD
-      <Image
-        source={require('../images/GoToFit.png')}
-        style={styles.homeLogo}
-      />
-      <Text style={styles.title}>Bienvenido a Go To Fit</Text>
-      <Text style={styles.subtitle}>Empieza tu rutina de ejercicios hoy mismo</Text>
-=======
       <Carousel />
       <View style={styles.overlay}>
         <Animated.Image
@@ -44,7 +36,6 @@ const Home = () => {
         <Text style={styles.title}>¡Bienvenido a Go To Fit!</Text>
         <Text style={styles.subtitle}>Empieza tu rutina de ejercicios hoy mismo</Text>
       </View>
->>>>>>> 3147d844b3997120f5fbae18596c91250a103c36
     </View>
   )
 }
@@ -58,12 +49,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-<<<<<<< HEAD
-    padding: 20,
-    backgroundColor: '#0e0e36',
-=======
     backgroundColor: 'rgba(0, 0, 0, 0.2)' // Agregar un fondo semitransparente
->>>>>>> 3147d844b3997120f5fbae18596c91250a103c36
   },
   homeLogo: {
     width: 180,
@@ -74,11 +60,7 @@ const styles = StyleSheet.create({
     fontSize: 28,
     fontWeight: 'bold',
     marginBottom: 10,
-<<<<<<< HEAD
-    color: 'white',
-=======
     color: 'white'
->>>>>>> 3147d844b3997120f5fbae18596c91250a103c36
   },
   subtitle: {
     fontSize: 16,
@@ -88,8 +70,4 @@ const styles = StyleSheet.create({
   }
 })
 
-<<<<<<< HEAD
-export default Home;
-=======
 export default Home
->>>>>>> 3147d844b3997120f5fbae18596c91250a103c36
