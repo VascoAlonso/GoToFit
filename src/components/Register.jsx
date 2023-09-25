@@ -11,12 +11,12 @@ import {
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NativeRouter, Route, Link } from 'react-router-native';
 
-const Login = () => {
+const Register = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLogin = async () => {
-    // Tu lógica de inicio de sesión aquí
+  const handleRegister = async () => {
+    // Tu lógica de registro aquí
   };
 
   return (
@@ -30,9 +30,9 @@ const Login = () => {
             <View style={styles.content}>
               <Card style={styles.card}>
                 <Card.Content>
-                  <Title style={styles.title}>¡Volviste!</Title>
+                  <Title style={styles.title}>¡Regístrate!</Title>
                   <Paragraph style={styles.cardSubtitle}>
-                    Inicia sesión para acceder a tus rutinas favoritas.
+                    Crea una cuenta para mantener un registro de tu salud.
                   </Paragraph>
                   <TextInput
                     label="Nombre de usuario"
@@ -49,32 +49,20 @@ const Login = () => {
                   />
                   <Button
                     mode="contained"
-                    onPress={handleLogin}
-                    style={styles.loginButton}
-                    labelStyle={styles.loginButtonLabel}
+                    onPress={handleRegister}
+                    style={styles.registerButton}
+                    labelStyle={styles.registerButtonLabel}
                   >
-                    Iniciar Sesión
+                    Registrarse
                   </Button>
                 </Card.Content>
                 <TouchableOpacity>
-                  <Link to="/forgot-password">
-                    <Text style={styles.forgotPasswordLink}>
-                      ¿Olvidaste tu contraseña?
+                  <Link to="/login">
+                    <Text style={styles.loginLink}>
+                      ¿Ya tienes una cuenta? Inicia sesión aquí
                     </Text>
                   </Link>
                 </TouchableOpacity>
-                <View style={styles.registerContainer}>
-                  <Text style={styles.registerText}>
-                    ¿No tienes una cuenta?
-                  </Text>
-                  <TouchableOpacity>
-                    <Link to="/regis">
-                      <Text style={styles.registerLink}>
-                        Regístrate aquí
-                      </Text>
-                    </Link>
-                  </TouchableOpacity>
-                </View>
               </Card>
             </View>
           </ScrollView>
@@ -117,36 +105,19 @@ const styles = StyleSheet.create({
   input: {
     marginBottom: 16,
   },
-  loginButton: {
+  registerButton: {
     backgroundColor: '#1E90FF',
     marginTop: 16,
   },
-  loginButtonLabel: {
+  registerButtonLabel: {
     color: 'white',
   },
-  forgotPasswordLink: {
+  loginLink: {
     color: '#1E90FF',
     textAlign: 'center',
     marginVertical: 16,
     fontSize: 16,
   },
-  registerContainer: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 24,
-  },
-  registerText: {
-    color: 'gray',
-    marginRight: 8,
-    fontSize: 16,
-  },
-  registerLink: {
-    color: '#1E90FF',
-    fontSize: 16,
-    fontWeight: 'bold',
-  },
 });
 
-export default Login;
-
+export default Register;

@@ -48,7 +48,7 @@ const AppBar = () => {
         <AppBarTab to='/'>Inicio</AppBarTab>
         <AppBarTab to= '/rutinas'>Rutinas</AppBarTab>
         <AppBarTab to='/miperfil'>Mi Perfil</AppBarTab>
-        <AppBarTab to='/signin'>Sign In/Sign Up</AppBarTab>
+        <AppBarTab to='/login'>Sign In/Sign Up</AppBarTab>
       </ScrollView>
     </View>
   )

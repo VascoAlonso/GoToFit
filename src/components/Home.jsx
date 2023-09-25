@@ -4,12 +4,10 @@ import { View, Text, StyleSheet, Image } from 'react-native';
 const Home = () => {
   return (
     <View style={styles.container}>
-      <View style={styles.homeLogo}>
-        <Image
-          source={require('../images/GoToFit.png')} 
-          style={styles.homeLogo}
-        />
-        </View>
+      <Image
+        source={require('../images/GoToFit.png')}
+        style={styles.homeLogo}
+      />
       <Text style={styles.title}>Bienvenido a Go To Fit</Text>
       <Text style={styles.subtitle}>Empieza tu rutina de ejercicios hoy mismo</Text>
     </View>
@@ -22,7 +20,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
-    backgroundColor: '#0e0e36', 
+    backgroundColor: '#0e0e36',
   },
   homeLogo: {
     width: 120,
@@ -34,7 +32,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 10,
-    color: "white"
+    color: 'white',
   },
   subtitle: {
     fontSize: 18,
