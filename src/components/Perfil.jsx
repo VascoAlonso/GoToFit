@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { View, StyleSheet, ScrollView } from 'react-native';
-import { Avatar, Text, Input, Button, Icon } from 'react-native-elements';
+import React, { useState } from 'react'
+import { View, StyleSheet, ScrollView } from 'react-native'
+import { Avatar, Text, Input, Button } from 'react-native-elements'
 
 const UserProfile = () => {
-  const [isEditing, setIsEditing] = useState(false);
+  const [isEditing, setIsEditing] = useState(false)
   const [userProfile, setUserProfile] = useState({
     name: 'Usuario Ejemplo',
     age: '30',
@@ -12,18 +12,18 @@ const UserProfile = () => {
     goal: 'Perder Peso',
     facebook: '',
     instagram: '',
-    twitter: '',
-  });
+    twitter: ''
+  })
 
   const toggleEditing = () => {
-    setIsEditing(!isEditing);
-  };
+    setIsEditing(!isEditing)
+  }
 
   const saveProfileChanges = () => {
     // Aquí puedes implementar la lógica para guardar los cambios en tu base de datos o almacenamiento local
     // Por ahora, actualizamos el estado del perfil con los valores editados
-    setIsEditing(false);
-  };
+    setIsEditing(false)
+  }
 
   return (
     <ScrollView
@@ -33,7 +33,7 @@ const UserProfile = () => {
       <Avatar
         source={require('../images/60111.jpg')}
         rounded
-        size="xlarge"
+        size='xlarge'
         containerStyle={styles.avatarContainer}
       />
       <View style={styles.infoContainer}>
@@ -41,50 +41,50 @@ const UserProfile = () => {
           {isEditing ? 'Editar Perfil' : 'Mi Perfil'}
         </Text>
         <Input
-          label="Nombre"
+          label='Nombre'
           value={userProfile.name}
           onChangeText={(text) => setUserProfile({ ...userProfile, name: text })}
           disabled={!isEditing}
         />
         <Input
-          label="Edad"
+          label='Edad'
           value={userProfile.age}
           onChangeText={(text) => setUserProfile({ ...userProfile, age: text })}
           disabled={!isEditing}
         />
         <Input
-          label="Peso (kg)"
+          label='Peso (kg)'
           value={userProfile.weight}
           onChangeText={(text) => setUserProfile({ ...userProfile, weight: text })}
           disabled={!isEditing}
         />
         <Input
-          label="Altura (cm)"
+          label='Altura (cm)'
           value={userProfile.height}
           onChangeText={(text) => setUserProfile({ ...userProfile, height: text })}
           disabled={!isEditing}
         />
         <Input
-          label="Objetivo"
+          label='Objetivo'
           value={userProfile.goal}
           onChangeText={(text) => setUserProfile({ ...userProfile, goal: text })}
           disabled={!isEditing}
         />
         {/* Agregar campos para redes sociales */}
         <Input
-          label="Facebook"
+          label='Facebook'
           value={userProfile.facebook}
           onChangeText={(text) => setUserProfile({ ...userProfile, facebook: text })}
           disabled={!isEditing}
         />
         <Input
-          label="Instagram"
+          label='Instagram'
           value={userProfile.instagram}
           onChangeText={(text) => setUserProfile({ ...userProfile, instagram: text })}
           disabled={!isEditing}
         />
         <Input
-          label="Twitter"
+          label='Twitter'
           value={userProfile.twitter}
           onChangeText={(text) => setUserProfile({ ...userProfile, twitter: text })}
           disabled={!isEditing}
@@ -96,32 +96,32 @@ const UserProfile = () => {
         containerStyle={styles.buttonContainer}
       />
     </ScrollView>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
     paddingVertical: 20,
-    paddingHorizontal: 15,
+    paddingHorizontal: 15
   },
   avatarContainer: {
     alignSelf: 'center',
-    marginBottom: 20,
+    marginBottom: 20
   },
   infoContainer: {
     backgroundColor: 'white',
     padding: 20,
     borderRadius: 10,
-    elevation: 2,
+    elevation: 2
   },
   infoTitle: {
     marginBottom: 20,
-    textAlign: 'center',
+    textAlign: 'center'
   },
   buttonContainer: {
-    marginTop: 20,
-  },
-});
+    marginTop: 20
+  }
+})
 
-export default UserProfile;
+export default UserProfile

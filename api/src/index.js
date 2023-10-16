@@ -11,7 +11,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Conexión a la base de datos MongoDB
-mongoose.connect('mongodb://localhost:27017/mydb', { useNewUrlParser: true });
+mongoose.connect('mongodb+srv://admgotofit:g6TKYwUj84alP3e6@cluster0.m0lxaaf.mongodb.net/', { useNewUrlParser: true });
 
 // Rutas
 const userRoutes = require('./routes/userRoutes'); // Importa tus rutas

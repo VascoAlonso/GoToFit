@@ -1,11 +1,11 @@
-import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Linking } from 'react-native';
-import { Icon } from 'react-native-elements';
+import React from 'react'
+import { View, Text, StyleSheet, TouchableOpacity, Linking } from 'react-native'
+import { Icon } from 'react-native-elements'
 
 const Footer = () => {
   const openLink = (url) => {
-    Linking.openURL(url).catch((err) => console.error('Error al abrir el enlace', err));
-  };
+    Linking.openURL(url).catch((err) => console.error('Error al abrir el enlace', err))
+  }
 
   return (
     <View style={styles.container}>
@@ -15,13 +15,13 @@ const Footer = () => {
       </View>
       <View style={styles.socialLinks}>
         <TouchableOpacity onPress={() => openLink('https://www.facebook.com')}>
-          <Icon name="facebook" type="font-awesome" color="#3b5998" size={30} />
+          <Icon name='facebook' type='font-awesome' color='#3b5998' size={30} />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => openLink('https://www.instagram.com')}>
-          <Icon name="instagram" type="font-awesome" color="#e4405f" size={30} />
+          <Icon name='instagram' type='font-awesome' color='#e4405f' size={30} />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => openLink('https://twitter.com')}>
-          <Icon name="twitter" type="font-awesome" color="#1da1f2" size={30} />
+          <Icon name='twitter' type='font-awesome' color='#1da1f2' size={30} />
         </TouchableOpacity>
       </View>
       <View style={styles.navigationLinks}>
@@ -36,8 +36,8 @@ const Footer = () => {
         </TouchableOpacity>
       </View>
     </View>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -45,10 +45,10 @@ const styles = StyleSheet.create({
     padding: 15,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   contactInfo: {
-    flex: 2,
+    flex: 2
   },
   socialLinks: {
     flex: 2,
@@ -58,16 +58,16 @@ const styles = StyleSheet.create({
   navigationLinks: {
     flex: 2,
     flexDirection: 'colum',
-    justifyContent: 'space-between',
+    justifyContent: 'space-between'
   },
   contactText: {
     color: 'white',
-    marginBottom: 10,
+    marginBottom: 10
   },
   linkText: {
     color: 'white',
-    fontSize: 10,
-  },
-});
+    fontSize: 10
+  }
+})
 
-export default Footer;
+export default Footer

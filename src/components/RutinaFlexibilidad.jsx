@@ -1,55 +1,35 @@
-import React, { useState } from 'react'
-import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native'
+import React from 'react';
+import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity } from 'react-native';
+import { Link } from 'react-router-native';
 
 const RutinaFlexibilidad = () => {
-  const [isPlaying, setIsPlaying] = useState(false)
+  const data = [
+    { id: '1', name: 'Estiramientos de piernas', route: 'EstiramientosPiernas', image: require('../images/estiramientopiernas.jpg') },
+    { id: '2', name: 'Yoga básico', route: 'YogaBasico', image: require('../images/yogabasico.jpeg') },
+    { id: '3', name: 'Pilates', route: 'Pilates', image: require('../images/pilates.jpeg') }
+    // ... otros ejercicios
+  ];
 
-  const toggleVideo = () => {
-    setIsPlaying((prevIsPlaying) => !prevIsPlaying)
-  }
+  const renderExerciseItem = ({ item }) => (
+    <Link to={`/${item.route}`} component={TouchableOpacity} style={styles.link}>
+      <View style={styles.exerciseItem}>
+        <Image source={item.image} style={styles.exerciseImage} />
+        <Text style={styles.exerciseName}>{item.name}</Text>
+      </View>
+    </Link>
+  );
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <Text style={styles.title}>Detalles de la Rutina de Flexibilidad</Text>
-      <Text>Nombre: Rutina de Flexibilidad</Text>
-      <Text>Dificultad: Principiante</Text>
       <Text style={styles.description}>
-        Descripción: Esta rutina de flexibilidad te ayudará a mejorar tu
-        elasticidad y reducir la rigidez muscular. Incluye ejercicios como
-        estiramientos estáticos y yoga.
+        Esta rutina de flexibilidad te ayudará a mejorar la movilidad y reducir la rigidez muscular. Incluye ejercicios como estiramientos de piernas, yoga básico y pilates.
       </Text>
-      <Text>Ejercicios:</Text>
-      <View style={styles.exerciseList}>
-        <ExerciseItem
-          imageSource={require('../images/estiramientos.jpg')}
-          exerciseName='Estiramientos Estáticos'
-        />
-        <ExerciseItem
-          imageSource={require('../images/estirar.jpg')}
-          exerciseName='Estirar'
-        />
-      </View>
-      <Text style={styles.videoText}>Video de Rutina</Text>
-      <View style={styles.videoContainer}>
-        <TouchableOpacity onPress={toggleVideo} style={styles.videoButton}>
-          <Text style={styles.videoButtonText}>
-            {isPlaying ? 'Detener Video' : 'Iniciar Video'}
-          </Text>
-        </TouchableOpacity>
-      </View>
-    </View>
-  )
+      <Text style={styles.subtitle}>Ejercicios:</Text>
+      {data.map(item => renderExerciseItem({ item }))}
+    </ScrollView>
+  );
 }
-
-const ExerciseItem = ({ imageSource, exerciseName }) => (
-  <View style={styles.exerciseItem}>
-    <Image
-      source={imageSource}
-      style={styles.exerciseImage}
-    />
-    <Text>{exerciseName}</Text>
-  </View>
-)
 
 const styles = StyleSheet.create({
   container: {
@@ -58,52 +38,40 @@ const styles = StyleSheet.create({
     padding: 20
   },
   title: {
-    fontSize: 24,
+    fontSize: 28,
     fontWeight: 'bold',
-    marginBottom: 20
+    marginBottom: 20,
+    textAlign: 'center'
   },
   description: {
+    fontSize: 16,
     marginBottom: 20
   },
-  exerciseList: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginBottom: 20
-  },
-  exerciseItem: {
-    flex: 1,
-    alignItems: 'center'
-  },
-  exerciseImage: {
-    width: 100,
-    height: 100,
-    borderRadius: 50,
-    marginBottom: 10
-  },
-  videoText: {
+  subtitle: {
     fontSize: 20,
     fontWeight: 'bold',
-    marginTop: 20,
     marginBottom: 10
   },
-  videoContainer: {
-    alignItems: 'center'
+  exerciseItem: {
+    marginBottom: 20,
+    backgroundColor: '#f0f0f0',
+    borderRadius: 10,
+    overflow: 'hidden'
   },
-  video: {
-    alignSelf: 'stretch',
-    height: 200
+  exerciseImage: {
+    width: '100%',
+    height: 200,
+    borderRadius: 10,
   },
-  videoButton: {
-    marginTop: 10,
-    backgroundColor: '#007BFF',
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-    borderRadius: 5
+  exerciseName: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    padding: 10,
+    textAlign: 'center'
   },
-  videoButtonText: {
-    color: 'white',
-    fontWeight: 'bold'
+  link: {
+    marginVertical: 5,
   }
-})
+});
 
-export default RutinaFlexibilidad
+export default RutinaFlexibilidad;

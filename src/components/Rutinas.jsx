@@ -4,16 +4,15 @@ import { Link } from 'react-router-native'
 
 const Rutinas = () => {
   const data = [
-    { id: '1', name: 'Rutina de Cardio', difficulty: 'Intermedia', route: 'RutinaCardio', image: require('../images/cardio.jpg') },
-    { id: '2', name: 'Rutina de Fuerza', difficulty: 'Avanzada', route: 'RutinaFuerza', image: require('../images/fuerza.jpg') },
-    { id: '3', name: 'Rutina de Flexibilidad', difficulty: 'Principiante', route: 'RutinaFlexibilidad', image: require('../images/flexibilidad.jpg') }
+    { id: '1', name: 'Rutina de Cardio', route: 'RutinaCardio', image: require('../images/cardio.jpg') },
+    { id: '2', name: 'Rutina de Fuerza', route: 'RutinaFuerza', image: require('../images/fuerza.jpg') },
+    { id: '3', name: 'Rutina de Flexibilidad', route: 'RutinaFlexibilidad', image: require('../images/flexibilidad.jpg') }
   ]
 
   const renderRoutineItem = ({ item }) => (
     <Link to={`/${item.route}`} component={TouchableOpacity}>
       <ImageBackground source={item.image} style={styles.routineItem}>
         <Text style={styles.routineName}>{item.name}</Text>
-        <Text style={styles.routineDifficulty}>{item.difficulty}</Text>
       </ImageBackground>
     </Link>
   )
@@ -54,11 +53,8 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     color: 'white'
-  },
-  routineDifficulty: {
-    fontSize: 16,
-    color: 'white'
   }
+
 })
 
 export default Rutinas
