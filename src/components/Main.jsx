@@ -20,6 +20,8 @@ import PressBanca from './PressBanca.jsx'
 import EstiramientosPiernas from './EstiramientosPiernas.jsx'
 import YogaBasico from './YogaBasico.jsx'
 import Pilates from './Pilates.jsx'
+import Recetas from './Recetas.jsx'
+import RecetasSanas from './RecetasSanas.jsx'
 
 const Main = () => {
   return (
@@ -44,6 +46,8 @@ const Main = () => {
           <Route path='/EstiramientosPiernas' component={EstiramientosPiernas} />
           <Route path='/YogaBasico' component={YogaBasico} />
           <Route path='/Pilates' component={Pilates} />
+          <Route path='/Recetas'component ={Recetas} />
+          <Route path='/RecetasSanas' component ={RecetasSanas}/>
 
           <Redirect to='/' />
         </Switch>

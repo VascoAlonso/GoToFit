@@ -50,8 +50,10 @@ const AppBar = () => {
       <ScrollView showsHorizontalScrollIndicator={false} horizontal style={styles.scroll}>
         <AppBarTab to='/'><Ionicons name='home' size={30} color='white' /></AppBarTab>
         <AppBarTab to='/rutinas'><MaterialIcons name='fitness-center' size={30} color='white' /></AppBarTab>
+        <AppBarTab to='/recetas'><Entypo name='bowl' size={30} color='white' /></AppBarTab>
         <AppBarTab to='/miperfil'><Ionicons name='person' size={30} color='white' /></AppBarTab>
         <AppBarTab to='/login'><Entypo name='login' size={30} color='white' /></AppBarTab>
+        
       </ScrollView>
     </View>
   )
