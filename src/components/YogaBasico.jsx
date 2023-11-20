@@ -1,5 +1,5 @@
-import React from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import React from 'react'
+import { View, Text, StyleSheet, Image } from 'react-native'
 
 const YogaBasico = () => {
   return (
@@ -14,36 +14,36 @@ const YogaBasico = () => {
       <Text>- Presta atención a tu respiración y practica la respiración consciente.</Text>
       <Text>- Escucha a tu cuerpo y no fuerces ninguna postura.</Text>
     </View>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    padding: 20,
+    padding: 20
   },
   exerciseImage: {
     width: '100%',
     height: 200,
     borderRadius: 10,
-    marginBottom: 20,
+    marginBottom: 20
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
-    marginBottom: 10,
+    marginBottom: 10
   },
   description: {
     fontSize: 16,
     lineHeight: 24,
-    marginBottom: 20,
+    marginBottom: 20
   },
   tip: {
     fontSize: 20,
     fontWeight: 'bold',
-    marginBottom: 10,
-  },
-});
+    marginBottom: 10
+  }
+})
 
 export default YogaBasico
