@@ -23,6 +23,13 @@ const styles = StyleSheet.create({
   },
   active: {
     color: theme.appBar.textPrimary
+  },
+  logoutButton: {
+    backgroundColor: 'white',
+    borderRadius: 8,
+    paddingVertical: 10,
+    paddingHorizontal: 15,
+    marginLeft: 10
   }
 })
 
@@ -44,7 +51,12 @@ const AppBarTab = ({ children, to }) => {
   )
 }
 
-const AppBar = () => {
+const AppBar = ({ isLoggedIn, onLogout }) => {
+  const handleLogout = () => {
+    // Lógica de cierre de sesión
+    onLogout()
+  }
+
   return (
     <View style={styles.container}>
       <ScrollView showsHorizontalScrollIndicator={false} horizontal style={styles.scroll}>
@@ -52,8 +64,17 @@ const AppBar = () => {
         <AppBarTab to='/rutinas'><MaterialIcons name='fitness-center' size={30} color='white' /></AppBarTab>
         <AppBarTab to='/recetas'><Entypo name='bowl' size={30} color='white' /></AppBarTab>
         <AppBarTab to='/miperfil'><Ionicons name='person' size={30} color='white' /></AppBarTab>
-        <AppBarTab to='/login'><Entypo name='login' size={30} color='white' /></AppBarTab>
-        
+        {isLoggedIn ? (
+          <TouchableWithoutFeedback onPress={handleLogout}>
+            <View style={[styles.text, styles.logoutButton]}>
+              <StyledText fontWeight='bold' style={{ color: 'black' }}>
+                Cerrar Sesión
+              </StyledText>
+            </View>
+          </TouchableWithoutFeedback>
+        ) : (
+          <AppBarTab to='/login'><Entypo name='login' size={30} color='white' /></AppBarTab>
+        )}
       </ScrollView>
     </View>
   )

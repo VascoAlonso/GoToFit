@@ -11,13 +11,13 @@ const RutinaCardio = () => {
   ];
 
   const renderExerciseItem = ({ item }) => (
-    <Link to={`/${item.route}`} component={TouchableOpacity} style={styles.link}>
+    <Link key={item.id} to={`/${item.route}`} component={TouchableOpacity} style={styles.link}>
       <View style={styles.exerciseItem}>
         <Image source={item.image} style={styles.exerciseImage} />
         <Text style={styles.exerciseName}>{item.name}</Text>
       </View>
     </Link>
-  );
+  )
 
   return (
     <ScrollView style={styles.container}>
@@ -28,7 +28,7 @@ const RutinaCardio = () => {
       <Text style={styles.subtitle}>Ejercicios:</Text>
       {data.map(item => renderExerciseItem({ item }))}
     </ScrollView>
-  );
+  )
 }
 
 const styles = StyleSheet.create({

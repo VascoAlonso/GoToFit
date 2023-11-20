@@ -11,7 +11,7 @@ const RutinaFuerza = () => {
   ];
 
   const renderExerciseItem = ({ item }) => (
-    <Link to={`/${item.route}`} component={TouchableOpacity} style={styles.link}>
+    <Link key={item.id} to={`/${item.route}`} component={TouchableOpacity} style={styles.link}>
       <View style={styles.exerciseItem}>
         <Image source={item.image} style={styles.exerciseImage} />
         <Text style={styles.exerciseName}>{item.name}</Text>

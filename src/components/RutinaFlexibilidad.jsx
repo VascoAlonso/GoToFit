@@ -1,6 +1,6 @@
-import React from 'react';
-import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity } from 'react-native';
-import { Link } from 'react-router-native';
+import React from 'react'
+import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity } from 'react-native'
+import { Link } from 'react-router-native'
 
 const RutinaFlexibilidad = () => {
   const data = [
@@ -8,16 +8,16 @@ const RutinaFlexibilidad = () => {
     { id: '2', name: 'Yoga básico', route: 'YogaBasico', image: require('../images/yogabasico.jpeg') },
     { id: '3', name: 'Pilates', route: 'Pilates', image: require('../images/pilates.jpeg') }
     // ... otros ejercicios
-  ];
+  ]
 
   const renderExerciseItem = ({ item }) => (
-    <Link to={`/${item.route}`} component={TouchableOpacity} style={styles.link}>
+    <Link key={item.id} to={`/${item.route}`} component={TouchableOpacity} style={styles.link}>
       <View style={styles.exerciseItem}>
         <Image source={item.image} style={styles.exerciseImage} />
         <Text style={styles.exerciseName}>{item.name}</Text>
       </View>
     </Link>
-  );
+  )
 
   return (
     <ScrollView style={styles.container}>
@@ -28,7 +28,7 @@ const RutinaFlexibilidad = () => {
       <Text style={styles.subtitle}>Ejercicios:</Text>
       {data.map(item => renderExerciseItem({ item }))}
     </ScrollView>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
   exerciseImage: {
     width: '100%',
     height: 200,
-    borderRadius: 10,
+    borderRadius: 10
   },
   exerciseName: {
     fontSize: 18,
@@ -70,8 +70,8 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
   link: {
-    marginVertical: 5,
+    marginVertical: 5
   }
-});
+})
 
-export default RutinaFlexibilidad;
+export default RutinaFlexibilidad
